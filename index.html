@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GigCalc Pro — Free Gig Worker Tax & Earnings Calculator USA 2024</title>
+<meta name="description" content="Free USA gig worker tax calculator for Uber, DoorDash, Lyft, Instacart & Amazon Flex. Calculate net profit, real hourly rate, mileage deductions and tax reserve instantly.">
+<meta name="keywords" content="gig worker tax calculator, uber driver earnings calculator, doordash profit calculator, mileage deduction gig worker, freelance tax estimator USA, self employment tax calculator">
+<meta name="author" content="Dilshan Nayanajith Ilangasinghe">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gigcalcpro.com/">
+<meta property="og:title" content="GigCalc Pro — Know Your Real Gig Earnings in Seconds">
+<meta property="og:description" content="Free calculator for gig workers. Net profit, taxes, mileage deductions, real hourly rate. Uber, DoorDash, Lyft, Instacart & more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gigcalcpro.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GigCalc Pro — Gig Worker Tax Calculator">
+<meta name="twitter:description" content="Know your real take-home pay after taxes, gas, mileage and expenses.">
+
+<!-- Google AdSense (replace with your publisher ID) -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+<!-- FAQ Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much tax should a gig worker set aside in the USA?","acceptedAnswer":{"@type":"Answer","text":"Most gig workers should set aside 25–30% of net earnings. Self-employment tax is 15.3% (Social Security + Medicare), plus federal income tax of 10–22%. A safe default is 28% combined. High-tax states like CA or NY may require 32–35%."}},
+    {"@type":"Question","name":"What is the IRS mileage deduction rate for 2024?","acceptedAnswer":{"@type":"Answer","text":"The IRS standard mileage rate for 2024 is 67 cents per mile for business use. Gig workers can deduct miles from the moment they accept a trip to when it ends. For 20,000 business miles, that equals a $13,400 tax deduction on Schedule C."}},
+    {"@type":"Question","name":"What is a good hourly rate for Uber or DoorDash drivers?","acceptedAnswer":{"@type":"Answer","text":"After all expenses (gas, maintenance, taxes), targeting $15–20/hour net is recommended. Below $12/hour net, traditional employment with benefits may be more financially sound. Always calculate after expenses, never on gross earnings."}},
+    {"@type":"Question","name":"Should gig workers accept low-tip orders?","acceptedAnswer":{"@type":"Answer","text":"Reject orders paying less than $1.50/mile or resulting in under $15/hour net. Factor in gas cost, wear on your vehicle, and opportunity cost. Use our calculator to evaluate each order's real profitability before accepting."}},
+    {"@type":"Question","name":"Do gig workers need to file quarterly taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you expect to owe $1,000+ in taxes for the year, the IRS requires quarterly estimated payments. 2024 due dates: April 15, June 17, September 16, and January 15, 2025. Use IRS Form 1040-ES. Missing payments triggers underpayment penalties."}}
+  ]
+}
+</script>
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"GigCalc Pro",
+  "description":"Free gig worker tax and earnings calculator for USA platforms",
+  "url":"https://gigcalcpro.com",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Person","name":"Dilshan Nayanajith Ilangasinghe","email":"nayanajithilangasinghe2002@gmail.com"}
+}
+</script>
+
+<style>
+/* =============================================
+   DESIGN SYSTEM — Finance-Grade Precision
+   Aesthetic: Refined luxury fintech
+   Fonts: DM Serif Display + DM Sans
+   Colors: Deep navy + electric emerald + cream
+   ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+:root {
+  --navy:        #0B1628;
+  --navy-mid:    #152238;
+  --navy-light:  #1E3250;
+  --electric:    #00D084;
+  --electric-dim:#00B370;
+  --electric-bg: rgba(0,208,132,0.08);
+  --sky:         #3B8DFF;
+  --sky-bg:      rgba(59,141,255,0.08);
+  --amber:       #F5A623;
+  --rose:        #FF5C5C;
+  --cream:       #F7F4EE;
+  --white:       #FFFFFF;
+  --gray-50:     #F9FAFB;
+  --gray-100:    #F3F4F6;
+  --gray-200:    #E5E7EB;
+  --gray-300:    #D1D5DB;
+  --gray-400:    #9CA3AF;
+  --gray-500:    #6B7280;
+  --gray-600:    #4B5563;
+  --gray-700:    #374151;
+  --gray-800:    #1F2937;
+  --gray-900:    #111827;
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+  --r-full:9999px;
+  --sh-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --sh-md: 0 4px 12px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.04);
+  --sh-lg: 0 10px 30px rgba(0,0,0,.09), 0 4px 8px rgba(0,0,0,.04);
+  --sh-xl: 0 20px 60px rgba(0,0,0,.12), 0 8px 20px rgba(0,0,0,.06);
+  --dur: 0.22s;
+  --ease: cubic-bezier(0.4,0,0.2,1);
+  /* Light mode tokens */
+  --bg:        var(--white);
+  --bg-soft:   var(--gray-50);
+  --bg-card:   var(--white);
+  --border:    var(--gray-200);
+  --text-1:    var(--gray-900);
+  --text-2:    var(--gray-600);
+  --text-3:    var(--gray-400);
+  --input-bg:  var(--white);
+  --header-bg: rgba(255,255,255,0.92);
+}
+
+.dark {
+  --bg:        #0B1628;
+  --bg-soft:   #0F1E35;
+  --bg-card:   #152238;
+  --border:    #1E3250;
+  --text-1:    #F1F5F9;
+  --text-2:    #94A3B8;
+  --text-3:    #475569;
+  --input-bg:  #1E3250;
+  --header-bg: rgba(11,22,40,0.95);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text-1);
+  line-height:1.65;
+  transition:background var(--dur) var(--ease), color var(--dur) var(--ease);
+  overflow-x:hidden;
+}
+body.modal-open{overflow:hidden}
+a{color:var(--sky);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:inherit}
+input,select,textarea{font-family:inherit}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg-soft)}
+::-webkit-scrollbar-thumb{background:var(--gray-300);border-radius:3px}
+.dark ::-webkit-scrollbar-thumb{background:var(--navy-light)}
+
+/* ============ HEADER ============ */
+.header{
+  position:sticky;top:0;z-index:200;
+  background:var(--header-bg);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;
+  padding:0 1.5rem;
+  height:68px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.logo-wrap{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo-mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,#00D084,#3B8DFF);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;flex-shrink:0;
+  box-shadow:0 2px 10px rgba(0,208,132,0.35);
+}
+.logo-text{font-size:1.18rem;font-weight:700;color:var(--text-1);letter-spacing:-0.01em}
+.logo-text span{color:var(--electric)}
+.nav-links{display:flex;align-items:center;gap:4px}
+@media(max-width:720px){.nav-links .nav-link{display:none}}
+.nav-link{
+  padding:7px 13px;border-radius:var(--r-sm);
+  font-size:0.85rem;font-weight:500;
+  color:var(--text-2);background:none;border:none;
+  transition:color var(--dur),background var(--dur);
+}
+.nav-link:hover{color:var(--text-1);background:var(--bg-soft)}
+.header-right{display:flex;align-items:center;gap:10px}
+.dark-btn{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--border);background:var(--bg-soft);
+  color:var(--text-2);font-size:17px;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--dur);
+}
+.dark-btn:hover{background:var(--bg-card);color:var(--text-1)}
+.btn-pill{
+  padding:9px 20px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,var(--electric),var(--sky));
+  color:#fff;font-size:0.85rem;font-weight:700;border:none;
+  box-shadow:0 2px 12px rgba(0,208,132,0.3);
+  transition:all var(--dur);white-space:nowrap;
+}
+.btn-pill:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,208,132,0.4)}
+
+/* ============ PAGE ROUTER ============ */
+.page{display:none}
+.page.active{display:block}
+
+/* ============ AD BANNER ============ */
+.ad-slot{
+  width:100%;max-width:728px;margin:0 auto;
+  min-height:90px;border-radius:var(--r-md);
+  border:1.5px dashed var(--border);
+  background:var(--bg-soft);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-3);font-size:0.78rem;font-style:italic;
+  padding:1rem;text-align:center;
+}
+.ad-slot-rect{min-height:250px;max-width:300px}
+.ad-wrapper{padding:1.5rem 1.5rem 0;display:flex;justify-content:center}
+
+/* ============ HERO ============ */
+.hero{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 40%,#0D2240 100%);
+  padding:6rem 1.5rem 5rem;
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 50%,rgba(0,208,132,0.12) 0%,transparent 70%),
+    radial-gradient(ellipse 500px 350px at 80% 30%,rgba(59,141,255,0.1) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-grid-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse at center,rgba(0,0,0,0.5) 0%,transparent 70%);
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,208,132,0.12);
+  border:1px solid rgba(0,208,132,0.25);
+  color:#00D084;
+  padding:6px 18px;border-radius:var(--r-full);
+  font-size:0.8rem;font-weight:600;letter-spacing:0.04em;
+  text-transform:uppercase;margin-bottom:1.75rem;
+  position:relative;
+}
+.hero h1{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(2.4rem,5.5vw,4rem);
+  font-weight:400;
+  color:#fff;
+  line-height:1.12;
+  margin-bottom:1.5rem;
+  position:relative;
+  letter-spacing:-0.01em;
+}
+.hero h1 em{
+  font-style:italic;
+  color:var(--electric);
+}
+.hero-sub{
+  font-size:1.1rem;color:rgba(255,255,255,0.65);
+  max-width:560px;margin:0 auto 2.5rem;
+  position:relative;line-height:1.75;
+}
+.hero-cta-row{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  flex-wrap:wrap;position:relative;margin-bottom:3rem;
+}
+.btn-hero-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:16px 36px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,#00D084,#00B370);
+  color:#fff;font-size:1rem;font-weight:700;border:none;
+  box-shadow:0 4px 24px rgba(0,208,132,0.45);
+  transition:all .25s;
+}
+.btn-hero-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,208,132,0.5)}
+.btn-hero-secondary{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:16px 28px;border-radius:var(--r-full);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.18);
+  color:#fff;font-size:0.95rem;font-weight:500;
+  transition:all .25s;backdrop-filter:blur(8px);
+}
+.btn-hero-secondary:hover{background:rgba(255,255,255,0.14);text-decoration:none}
+.hero-platforms{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;flex-wrap:wrap;position:relative;
+}
+.platform-chip{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--r-full);
+  padding:8px 16px;font-size:0.82rem;font-weight:500;
+  color:rgba(255,255,255,0.8);
+  backdrop-filter:blur(8px);
+}
+.platform-chip-emoji{font-size:16px}
+.hero-trust{
+  display:flex;align-items:center;justify-content:center;
+  gap:2rem;flex-wrap:wrap;
+  margin-top:3rem;padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+  position:relative;
+}
+.trust-item{
+  display:flex;align-items:center;gap:9px;
+  color:rgba(255,255,255,0.55);font-size:0.82rem;font-weight:500;
+}
+.trust-dot{
+  width:24px;height:24px;border-radius:50%;
+  background:rgba(0,208,132,0.15);
+  border:1px solid rgba(0,208,132,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;flex-shrink:0;
+}
+
+/* ============ MAIN CONTAINER ============ */
+.main-wrap{
+  max-width:1180px;margin:0 auto;
+  padding:3rem 1.5rem 5rem;
+}
+.calc-section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  font-weight:400;color:var(--text-1);
+  margin-bottom:.5rem;letter-spacing:-0.01em;
+}
+.calc-section-sub{
+  font-size:1rem;color:var(--text-2);margin-bottom:2rem;
+}
+
+/* ============ CALC GRID ============ */
+.calc-grid{
+  display:grid;
+  grid-template-columns:1fr 400px;
+  gap:2rem;align-items:start;
+}
+@media(max-width:940px){.calc-grid{grid-template-columns:1fr}}
+
+/* ============ CARDS ============ */
+.card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  box-shadow:var(--sh-md);
+  transition:background var(--dur),border-color var(--dur);
+}
+.card-pad{padding:1.75rem}
+.card-head{
+  display:flex;align-items:center;gap:13px;
+  padding:1.25rem 1.75rem;
+  border-bottom:1px solid var(--border);
+  transition:border-color var(--dur);
+}
+.card-icon{
+  width:42px;height:42px;border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;flex-shrink:0;
+}
+.ci-blue{background:var(--sky-bg)}
+.ci-green{background:var(--electric-bg)}
+.ci-amber{background:rgba(245,166,35,0.1)}
+.card-head-info{flex:1;min-width:0}
+.card-head-title{font-size:1rem;font-weight:700;color:var(--text-1)}
+.card-head-sub{font-size:0.78rem;color:var(--text-3);margin-top:2px}
+.card-body{padding:1.5rem 1.75rem}
+@media(max-width:480px){
+  .card-pad,.card-body,.card-head{padding-left:1.25rem;padding-right:1.25rem}
+}
+
+/* ============ PLATFORM SELECTOR ============ */
+.platform-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  margin-bottom:1.5rem;
+}
+@media(max-width:440px){.platform-grid{grid-template-columns:repeat(2,1fr)}}
+.p-btn{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;padding:13px 8px;
+  border:1.5px solid var(--border);border-radius:var(--r-md);
+  background:var(--bg-soft);color:var(--text-2);
+  font-size:0.76rem;font-weight:600;
+  transition:all var(--dur);
+}
+.p-btn:hover{border-color:var(--electric);color:var(--text-1);background:var(--electric-bg)}
+.p-btn.active{
+  border-color:var(--electric);
+  background:var(--electric-bg);color:var(--text-1);
+  box-shadow:0 0 0 3px rgba(0,208,132,0.15);
+}
+.p-emoji{font-size:22px;line-height:1}
+
+/* ============ FORM ============ */
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:500px){.field-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field-full{grid-column:1/-1}
+.label{
+  font-size:0.8rem;font-weight:600;
+  color:var(--text-2);
+  display:flex;align-items:center;gap:6px;
+}
+.tip{
+  width:16px;height:16px;border-radius:50%;
+  background:var(--bg-soft);border:1px solid var(--border);
+  font-size:10px;display:inline-flex;align-items:center;
+  justify-content:center;color:var(--text-3);cursor:help;
+  position:relative;flex-shrink:0;
+}
+.tip:hover::after{
+  content:attr(data-t);
+  position:absolute;bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%);
+  background:var(--gray-900);color:#fff;
+  padding:7px 12px;border-radius:var(--r-sm);
+  font-size:0.73rem;font-weight:400;
+  white-space:normal;width:190px;text-align:center;
+  z-index:50;line-height:1.5;
+  box-shadow:var(--sh-lg);
+}
+.dark .tip:hover::after{background:var(--navy-light);border:1px solid var(--border)}
+.input-wrap{position:relative;display:flex;align-items:center}
+.input-pre{
+  position:absolute;left:12px;
+  color:var(--text-3);font-size:0.9rem;font-weight:500;
+  pointer-events:none;
+}
+.finput{
+  width:100%;height:44px;
+  border:1.5px solid var(--border);border-radius:var(--r-sm);
+  background:var(--input-bg);color:var(--text-1);
+  padding:0 12px 0 28px;font-size:0.93rem;
+  transition:all var(--dur);outline:none;
+  -moz-appearance:textfield;
+}
+.finput.no-pre{padding-left:12px}
+.finput::-webkit-inner-spin-button,.finput::-webkit-outer-spin-button{-webkit-appearance:none}
+.finput:focus{border-color:var(--electric);box-shadow:0 0 0 3px rgba(0,208,132,0.15)}
+.finput.err{border-color:var(--rose)}
+.field-hint{font-size:0.72rem;color:var(--text-3);margin-top:1px}
+.field-err{font-size:0.72rem;color:var(--rose);display:none}
+.field-err.show{display:block}
+.divider-label{
+  display:flex;align-items:center;gap:12px;
+  margin:1.5rem 0 1rem;
+}
+.dl-text{
+  font-size:0.72rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--text-3);white-space:nowrap;
+}
+.dl-line{flex:1;height:1px;background:var(--border)}
+.slider-row{display:flex;flex-direction:column;gap:7px}
+.slider-head{display:flex;justify-content:space-between;align-items:center}
+.slider-badge{
+  padding:3px 12px;border-radius:var(--r-full);
+  background:var(--electric-bg);border:1px solid rgba(0,208,132,0.2);
+  font-size:0.82rem;font-weight:700;color:var(--electric);
+}
+input[type=range]{
+  width:100%;height:5px;-webkit-appearance:none;appearance:none;
+  background:var(--border);border-radius:3px;outline:none;cursor:pointer;
+  transition:background var(--dur);
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:20px;height:20px;
+  border-radius:50%;background:var(--electric);cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,208,132,0.4);
+  transition:transform var(--dur);
+}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+
+/* ============ ACTION ROW ============ */
+.action-row{
+  display:flex;flex-wrap:wrap;gap:10px;
+  padding:1.25rem 1.75rem;
+  border-top:1px solid var(--border);
+  transition:border-color var(--dur);
+}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:10px 18px;border-radius:var(--r-sm);
+  font-size:0.83rem;font-weight:600;border:none;
+  transition:all var(--dur);
+}
+.btn-em{
+  background:linear-gradient(135deg,#00D084,var(--sky));
+  color:#fff;box-shadow:0 2px 10px rgba(0,208,132,0.3);
+}
+.btn-em:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(0,208,132,0.4)}
+.btn-ghost{
+  background:var(--bg-soft);color:var(--text-2);
+  border:1px solid var(--border);
+}
+.btn-ghost:hover{background:var(--bg-card);color:var(--text-1)}
+.btn-outline-green{
+  background:var(--electric-bg);color:var(--electric);
+  border:1px solid rgba(0,208,132,0.25);
+}
+.btn-outline-red{
+  background:rgba(255,92,92,0.08);color:var(--rose);
+  border:1px solid rgba(255,92,92,0.2);
+}
+.saved-chip{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 12px;border-radius:var(--r-full);
+  background:var(--electric-bg);border:1px solid rgba(0,208,132,0.2);
+  font-size:0.74rem;font-weight:600;color:var(--electric);
+  opacity:0;transition:opacity .3s;
+}
+.saved-chip.show{opacity:1}
+
+/* ============ RESULTS PANEL ============ */
+.results-sticky{position:sticky;top:80px}
+.results-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  box-shadow:var(--sh-xl);
+  overflow:hidden;
+}
+.res-header{
+  background:linear-gradient(145deg,var(--navy) 0%,var(--navy-mid) 100%);
+  padding:1.75rem;position:relative;overflow:hidden;
+}
+.res-header::after{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,208,132,0.12),transparent);
+  pointer-events:none;
+}
+.res-header-label{
+  font-size:0.73rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,0.45);
+  margin-bottom:8px;
+}
+.res-net{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:3.2rem;font-weight:400;color:#fff;
+  letter-spacing:-0.02em;line-height:1;
+  transition:color .3s;
+}
+.res-net.negative{color:#fca5a5}
+.res-sub{font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:8px}
+.platform-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--r-full);padding:5px 14px;
+  font-size:0.78rem;color:rgba(255,255,255,0.7);
+  margin-top:12px;
+}
+
+/* Health score */
+.health-wrap{
+  padding:1.25rem 1.75rem;
+  border-bottom:1px solid var(--border);
+}
+.health-label{
+  font-size:0.72rem;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--text-3);margin-bottom:10px;
+}
+.health-track{
+  height:10px;background:var(--bg-soft);
+  border-radius:5px;overflow:hidden;margin-bottom:7px;
+}
+.health-fill{
+  height:100%;border-radius:5px;
+  background:linear-gradient(90deg,var(--electric),#3B8DFF);
+  transition:width .9s cubic-bezier(.4,0,.2,1);
+}
+.health-row{display:flex;justify-content:space-between;align-items:center}
+.health-score{font-weight:700;font-size:0.88rem}
+.health-badge{
+  font-size:0.74rem;font-weight:700;
+  padding:3px 10px;border-radius:var(--r-full);
+}
+.hb-good{background:rgba(0,208,132,0.12);color:var(--electric)}
+.hb-avg{background:rgba(245,166,35,0.12);color:var(--amber)}
+.hb-low{background:rgba(255,92,92,0.12);color:var(--rose)}
+
+/* Result rows */
+.res-rows{padding:.25rem 0}
+.rr{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.7rem 1.75rem;
+  border-bottom:1px solid var(--border);
+  transition:border-color var(--dur);
+}
+.rr:last-child{border-bottom:none}
+.rr-label{
+  display:flex;align-items:center;gap:9px;
+  font-size:0.84rem;color:var(--text-2);
+}
+.rr-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.rr-val{
+  font-size:0.92rem;font-weight:700;color:var(--text-1);
+  transition:all .25s;
+}
+.rr-val.pos{color:#00D084}
+.rr-val.neg{color:var(--rose)}
+.rr-val.blue{color:var(--sky)}
+@keyframes valPop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.pop{animation:valPop .3s ease}
+
+/* Projections */
+.proj-strip{
+  padding:1.25rem 1.75rem;
+  background:var(--bg-soft);
+  border-top:1px solid var(--border);
+}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.proj-tile{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:12px 14px;text-align:center;
+}
+.proj-tile-label{
+  font-size:0.7rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--text-3);
+}
+.proj-tile-val{
+  font-size:1.18rem;font-weight:800;margin-top:4px;
+  color:var(--sky);
+}
+.proj-tile-val.green{color:var(--electric)}
+.proj-tile-val.red{color:var(--rose);font-size:1rem}
+.proj-tile-val.amber{color:var(--amber);font-size:1rem}
+
+/* Decision */
+.decision-wrap{
+  padding:1.25rem 1.75rem;
+  border-top:1px solid var(--border);
+}
+.dec-badge{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 16px;border-radius:var(--r-md);
+  font-weight:700;font-size:0.88rem;
+  transition:all .3s;
+}
+.dec-accept{background:rgba(0,208,132,0.1);color:var(--electric);border:1px solid rgba(0,208,132,0.2)}
+.dec-caution{background:rgba(245,166,35,0.1);color:var(--amber);border:1px solid rgba(245,166,35,0.2)}
+.dec-reject{background:rgba(255,92,92,0.1);color:var(--rose);border:1px solid rgba(255,92,92,0.2)}
+.dec-icon{font-size:24px;flex-shrink:0}
+.dec-sub{font-size:0.74rem;font-weight:400;opacity:.8;margin-top:3px}
+
+/* Results actions */
+.res-actions{
+  display:flex;gap:8px;flex-wrap:wrap;
+  padding:1.25rem 1.75rem;
+  border-top:1px solid var(--border);
+}
+
+/* Sidebar ad */
+.sidebar-ad{margin-top:1.5rem;display:flex;justify-content:center}
+
+/* ============ CONTENT SECTIONS ============ */
+.content-wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem}
+.section-block{margin:4rem 0}
+.section-h2{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:clamp(1.7rem,3vw,2.3rem);
+  font-weight:400;color:var(--text-1);
+  margin-bottom:.6rem;letter-spacing:-0.01em;
+}
+.section-intro{font-size:1rem;color:var(--text-2);line-height:1.8;margin-bottom:1.5rem;max-width:740px}
+.tip-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1rem;margin-top:1.25rem;
+}
+.tip-tile{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:1.4rem;
+  box-shadow:var(--sh-sm);
+  transition:all .25s;
+}
+.tip-tile:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--electric)}
+.tip-icon{font-size:28px;margin-bottom:12px}
+.tip-title{font-weight:700;font-size:0.95rem;color:var(--text-1);margin-bottom:6px}
+.tip-text{font-size:0.84rem;color:var(--text-2);line-height:1.7}
+.highlight-box{
+  background:var(--electric-bg);
+  border:1px solid rgba(0,208,132,0.2);
+  border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;
+  margin:1.25rem 0;
+}
+.highlight-box p{color:var(--text-2);font-size:0.93rem;line-height:1.75}
+.highlight-box strong{color:var(--text-1)}
+
+/* Mid ad */
+.mid-ad-wrap{padding:2.5rem 0;display:flex;justify-content:center}
+
+/* ============ AFFILIATE ============ */
+.aff-section{
+  background:linear-gradient(135deg,var(--electric-bg),var(--sky-bg));
+  border:1px solid rgba(0,208,132,0.15);
+  border-radius:var(--r-xl);padding:2.25rem;margin:3rem 0;
+}
+.aff-section-h{font-size:1.1rem;font-weight:700;color:var(--text-1);margin-bottom:.4rem}
+.aff-note{font-size:0.82rem;color:var(--text-3);margin-bottom:1.25rem}
+.aff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px}
+.aff-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:1.1rem 1.1rem 1.25rem;
+  display:flex;flex-direction:column;gap:5px;
+  box-shadow:var(--sh-sm);
+  transition:all .25s;
+}
+.aff-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.aff-card-icon{font-size:28px;margin-bottom:4px}
+.aff-card-title{font-weight:700;font-size:0.9rem;color:var(--text-1)}
+.aff-card-desc{font-size:0.78rem;color:var(--text-2);line-height:1.6;flex:1}
+.aff-link{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:0.78rem;font-weight:700;color:var(--electric);
+  margin-top:6px;
+}
+.aff-link:hover{text-decoration:none;opacity:.8}
+
+/* ============ FAQ ============ */
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:1.25rem}
+.faq-item{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  overflow:hidden;
+  box-shadow:var(--sh-sm);
+  transition:border-color .25s;
+}
+.faq-item:hover{border-color:var(--electric)}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:1.1rem 1.25rem;
+  font-weight:600;font-size:0.93rem;color:var(--text-1);
+  background:none;border:none;width:100%;text-align:left;
+  cursor:pointer;transition:background .2s;
+}
+.faq-q:hover{background:var(--bg-soft)}
+.faq-chevron{font-size:18px;color:var(--text-3);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-body{
+  padding:.75rem 1.25rem 1.1rem;
+  border-top:1px solid var(--border);
+  font-size:0.88rem;color:var(--text-2);line-height:1.78;
+}
+.faq-item.open .faq-a{max-height:360px}
+
+/* ============ MODAL PAGES (About, Contact, Privacy, Terms) ============ */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);
+  align-items:flex-start;justify-content:center;
+  padding:2rem 1rem;overflow-y:auto;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r-xl);width:100%;max-width:760px;
+  box-shadow:var(--sh-xl);position:relative;margin:auto;
+  animation:modalIn .3s ease;
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal-head{
+  padding:1.75rem 2rem 1.25rem;
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+}
+.modal-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:1.7rem;font-weight:400;color:var(--text-1);
+}
+.modal-close{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--border);background:var(--bg-soft);
+  color:var(--text-2);font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;cursor:pointer;transition:all .2s;
+}
+.modal-close:hover{background:var(--bg-card);color:var(--text-1)}
+.modal-body{padding:1.75rem 2rem 2rem;overflow-y:auto}
+@media(max-width:540px){.modal-head,.modal-body{padding-left:1.25rem;padding-right:1.25rem}}
+.modal-body h3{
+  font-size:1rem;font-weight:700;color:var(--text-1);
+  margin:1.5rem 0 .5rem;
+}
+.modal-body h3:first-child{margin-top:0}
+.modal-body p{font-size:0.88rem;color:var(--text-2);line-height:1.8;margin-bottom:.75rem}
+.modal-body ul{
+  list-style:disc;padding-left:1.25rem;
+  font-size:0.88rem;color:var(--text-2);line-height:1.8;
+  margin-bottom:.75rem;
+}
+.modal-body ul li{margin-bottom:.3rem}
+.modal-body a{color:var(--electric)}
+.policy-updated{
+  display:inline-block;
+  background:var(--bg-soft);border:1px solid var(--border);
+  border-radius:var(--r-sm);padding:5px 12px;
+  font-size:0.75rem;color:var(--text-3);margin-bottom:1rem;
+}
+
+/* Contact form */
+.cform{display:flex;flex-direction:column;gap:14px;margin-top:1rem}
+.cfield{display:flex;flex-direction:column;gap:5px}
+.clabel{font-size:0.8rem;font-weight:600;color:var(--text-2)}
+.cinput{
+  width:100%;padding:11px 13px;
+  border:1.5px solid var(--border);border-radius:var(--r-sm);
+  background:var(--input-bg);color:var(--text-1);
+  font-size:0.9rem;outline:none;
+  transition:border-color .2s;
+}
+.cinput:focus{border-color:var(--electric);box-shadow:0 0 0 3px rgba(0,208,132,.12)}
+textarea.cinput{min-height:110px;resize:vertical}
+.btn-submit{
+  align-self:flex-start;
+  padding:12px 28px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,var(--electric),var(--sky));
+  color:#fff;font-size:.9rem;font-weight:700;border:none;
+  box-shadow:0 3px 14px rgba(0,208,132,.3);
+  transition:all .25s;cursor:pointer;
+}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(0,208,132,.4)}
+.form-success{
+  padding:12px 16px;border-radius:var(--r-sm);
+  background:var(--electric-bg);border:1px solid rgba(0,208,132,.2);
+  color:var(--electric);font-size:0.88rem;font-weight:600;
+  display:none;margin-top:8px;
+}
+.form-success.show{display:block}
+
+/* Developer card */
+.dev-card{
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  border:1px solid var(--navy-light);
+  border-radius:var(--r-lg);padding:1.5rem;
+  display:flex;align-items:flex-start;gap:16px;
+  margin:1.5rem 0;
+}
+.dev-avatar{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,var(--electric),var(--sky));
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;flex-shrink:0;color:#fff;font-weight:700;
+  font-family:'DM Serif Display',Georgia,serif;
+}
+.dev-name{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px}
+.dev-title{font-size:0.8rem;color:rgba(255,255,255,.5);margin-bottom:8px}
+.dev-bio{font-size:0.84rem;color:rgba(255,255,255,.65);line-height:1.7}
+.dev-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.dev-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:var(--r-full);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.75);font-size:0.78rem;font-weight:600;
+}
+.dev-link:hover{background:rgba(255,255,255,.14);text-decoration:none;color:#fff}
+
+/* ============ FOOTER ============ */
+.footer{
+  background:var(--navy);border-top:1px solid var(--navy-light);
+  padding:4rem 1.5rem 2rem;
+  transition:background .3s;
+}
+.dark .footer,.footer{background:var(--navy)}
+.footer-inner{max-width:1180px;margin:0 auto}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2rem;margin-bottom:3rem;
+}
+@media(max-width:760px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand p{font-size:0.84rem;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.75;max-width:280px}
+.footer-col h4{
+  font-size:0.74rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a,.footer-col ul li button{
+  font-size:0.84rem;color:rgba(255,255,255,.5);
+  background:none;border:none;cursor:pointer;padding:0;
+  transition:color .2s;text-align:left;
+}
+.footer-col ul li a:hover,.footer-col ul li button:hover{color:#fff;text-decoration:none}
+.footer-dev{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--r-lg);padding:1.5rem 1.75rem;
+  margin-bottom:2rem;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.footer-dev-avatar{
+  width:54px;height:54px;border-radius:50%;
+  background:linear-gradient(135deg,var(--electric),var(--sky));
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:700;color:#fff;flex-shrink:0;
+  font-family:'DM Serif Display',serif;
+}
+.footer-dev-info{flex:1;min-width:0}
+.footer-dev-name{font-size:1rem;font-weight:700;color:#fff}
+.footer-dev-role{font-size:0.78rem;color:rgba(255,255,255,.4);margin-top:2px}
+.footer-dev-desc{font-size:0.82rem;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.65}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding-top:1.75rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,.3)}
+.footer-disclaimer{
+  font-size:0.73rem;color:rgba(255,255,255,.25);
+  margin-top:1.25rem;line-height:1.65;max-width:900px;
+}
+
+/* ============ MOBILE STICKY CTA ============ */
+.mob-cta{
+  display:none;position:fixed;bottom:0;left:0;right:0;
+  background:var(--bg-card);border-top:1px solid var(--border);
+  padding:13px 1.25rem;z-index:150;
+  box-shadow:0 -4px 24px rgba(0,0,0,.1);
+}
+@media(max-width:940px){.mob-cta{display:block}}
+.mob-cta-btn{
+  width:100%;padding:15px;border-radius:var(--r-full);
+  background:linear-gradient(135deg,#00D084,var(--sky));
+  color:#fff;font-size:1rem;font-weight:700;border:none;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  box-shadow:0 4px 18px rgba(0,208,132,.35);
+}
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;bottom:90px;right:1.5rem;
+  background:var(--gray-900);color:#fff;
+  padding:12px 20px;border-radius:var(--r-sm);
+  font-size:0.84rem;font-weight:600;
+  z-index:300;opacity:0;transform:translateY(8px);
+  transition:opacity .3s,transform .3s;pointer-events:none;
+  box-shadow:var(--sh-lg);
+}
+.dark .toast{background:var(--navy-light);border:1px solid var(--border)}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* ============ PRINT ============ */
+@media print{
+  .header,.mob-cta,.toast,.modal-overlay,
+  .hero,.action-row,.res-actions,.ad-slot{display:none!important}
+  .calc-grid{grid-template-columns:1fr!important}
+  .results-sticky{position:static!important}
+  body{background:#fff!important;color:#000!important}
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fadeup{animation:fadeUp .5s ease forwards}
+.fadeup-d1{animation-delay:.1s;opacity:0}
+.fadeup-d2{animation-delay:.2s;opacity:0}
+.fadeup-d3{animation-delay:.3s;opacity:0}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo-wrap" onclick="showPage('home')" aria-label="GigCalc Pro Home">
+      <div class="logo-mark" aria-hidden="true">💰</div>
+      <span class="logo-text">GigCalc<span>Pro</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Site navigation">
+      <button class="nav-link" onclick="showPage('home')">Calculator</button>
+      <button class="nav-link" onclick="openModal('about')">About</button>
+      <button class="nav-link" onclick="openModal('contact')">Contact</button>
+      <button class="nav-link" onclick="openModal('privacy')">Privacy</button>
+      <button class="nav-link" onclick="openModal('terms')">Terms</button>
+    </nav>
+    <div class="header-right">
+      <button class="dark-btn" onclick="toggleDark()" aria-label="Toggle dark mode" id="darkBtn">🌙</button>
+      <button class="btn-pill" onclick="scrollToCalc()">Calculate My Profit</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AD SLOT TOP ============ -->
+<div class="ad-wrapper" aria-label="Advertisement">
+  <!-- AdSense Banner 728x90 — replace with your ad tag -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins>
+    <noscript>Advertisement — 728×90 Leaderboard (AdSense Slot)</noscript>
+  </div>
+</div>
+
+<!-- ============ HOME PAGE ============ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroH1">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-eyebrow" aria-label="Feature badge">
+      <span aria-hidden="true">✦</span> Free · Instant · No Signup Required
+    </div>
+    <h1 id="heroH1">
+      Know Your <em>Real</em><br>Gig Earnings<br>in Seconds
+    </h1>
+    <p class="hero-sub">
+      Stop guessing your take-home. Calculate net profit after taxes, gas, mileage deductions, and expenses — built for every major gig platform in the USA.
+    </p>
+    <div class="hero-cta-row">
+      <button class="btn-hero-primary" onclick="scrollToCalc()">
+        <span aria-hidden="true">⚡</span> Calculate My Profit
+      </button>
+      <button class="btn-hero-secondary" onclick="openModal('about')">
+        <span aria-hidden="true">ℹ️</span> How It Works
+      </button>
+    </div>
+    <div class="hero-platforms" aria-label="Supported gig platforms">
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">🚗</span> Uber</div>
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">🛵</span> DoorDash</div>
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">🚙</span> Lyft</div>
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">🛒</span> Instacart</div>
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">📦</span> Amazon Flex</div>
+      <div class="platform-chip"><span class="platform-chip-emoji" aria-hidden="true">💼</span> Freelance</div>
+    </div>
+    <div class="hero-trust" aria-label="Trust indicators">
+      <div class="trust-item"><div class="trust-dot" aria-hidden="true">🔒</div><span>100% Private</span></div>
+      <div class="trust-item"><div class="trust-dot" aria-hidden="true">🆓</div><span>Free Forever</span></div>
+      <div class="trust-item"><div class="trust-dot" aria-hidden="true">📱</div><span>Mobile Ready</span></div>
+      <div class="trust-item"><div class="trust-dot" aria-hidden="true">🇺🇸</div><span>USA Tax Rules 2024</span></div>
+      <div class="trust-item"><div class="trust-dot" aria-hidden="true">⚡</div><span>Instant Results</span></div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <main class="main-wrap" id="calculator" tabindex="-1">
+    <p class="calc-section-sub">Enter your details below — results update instantly as you type.</p>
+
+    <div class="calc-grid">
+      <!-- LEFT COLUMN: INPUTS -->
+      <div class="fadeup">
+        <!-- Platform -->
+        <div class="card" style="margin-bottom:1.5rem" aria-labelledby="platformTitle">
+          <div class="card-head">
+            <div class="card-icon ci-blue" aria-hidden="true">🚀</div>
+            <div class="card-head-info">
+              <div class="card-head-title" id="platformTitle">Select Your Platform</div>
+              <div class="card-head-sub">Choose the gig app you work with</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="platform-grid" role="group" aria-label="Platform selection">
+              <button class="p-btn active" onclick="setPlatform(this,'Uber','🚗')" aria-pressed="true">
+                <span class="p-emoji" aria-hidden="true">🚗</span>Uber
+              </button>
+              <button class="p-btn" onclick="setPlatform(this,'DoorDash','🛵')" aria-pressed="false">
+                <span class="p-emoji" aria-hidden="true">🛵</span>DoorDash
+              </button>
+              <button class="p-btn" onclick="setPlatform(this,'Lyft','🚙')" aria-pressed="false">
+                <span class="p-emoji" aria-hidden="true">🚙</span>Lyft
+              </button>
+              <button class="p-btn" onclick="setPlatform(this,'Instacart','🛒')" aria-pressed="false">
+                <span class="p-emoji" aria-hidden="true">🛒</span>Instacart
+              </button>
+              <button class="p-btn" onclick="setPlatform(this,'Amazon Flex','📦')" aria-pressed="false">
+                <span class="p-emoji" aria-hidden="true">📦</span>Amazon Flex
+              </button>
+              <button class="p-btn" onclick="setPlatform(this,'Freelance','💼')" aria-pressed="false">
+                <span class="p-emoji" aria-hidden="true">💼</span>Freelance
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earnings -->
+        <div class="card" style="margin-bottom:1.5rem" aria-labelledby="earningsTitle">
+          <div class="card-head">
+            <div class="card-icon ci-green" aria-hidden="true">💵</div>
+            <div class="card-head-info">
+              <div class="card-head-title" id="earningsTitle">Earnings & Hours</div>
+              <div class="card-head-sub">Today's income and time details</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="field-grid">
+              <div class="field">
+                <label class="label" for="fGross">Gross Earnings Today
+                  <span class="tip" data-t="Total shown in your app's earnings screen before any deductions." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-pre" aria-hidden="true">$</span>
+                  <input class="finput" type="number" id="fGross" value="120" min="0" step="0.01" aria-label="Gross earnings in dollars" oninput="calc()">
+                </div>
+                <div class="field-hint">App earnings before expenses</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fBonus">Bonuses, Tips & Surge
+                  <span class="tip" data-t="Extra surge pay, peak bonuses, or tips not already in gross earnings." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-pre" aria-hidden="true">$</span>
+                  <input class="finput" type="number" id="fBonus" value="20" min="0" step="0.01" aria-label="Bonus earnings" oninput="calc()">
+                </div>
+                <div class="field-hint">Quests, promotions, cash tips</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fHours">Hours Worked
+                  <span class="tip" data-t="Total hours logged on the app today, including time waiting between orders." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <input class="finput no-pre" type="number" id="fHours" value="6" min="0.5" max="24" step="0.5" aria-label="Hours worked today" oninput="calc()">
+                </div>
+                <div class="field-hint">Include all wait time</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fDays">Working Days/Week
+                  <span class="tip" data-t="How many days per week you typically work — used for projection calculations." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <input class="finput no-pre" type="number" id="fDays" value="5" min="1" max="7" step="1" aria-label="Working days per week" oninput="calc()">
+                </div>
+                <div class="field-hint">1–7 days for projections</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fTolls">Tolls & Parking
+                  <span class="tip" data-t="Business-related tolls and parking fees paid today. These are tax-deductible expenses." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-pre" aria-hidden="true">$</span>
+                  <input class="finput" type="number" id="fTolls" value="5" min="0" step="0.01" aria-label="Tolls and parking fees" oninput="calc()">
+                </div>
+                <div class="field-hint">Deductible business expense</div>
+              </div>
+            </div>
+
+            <div class="divider-label">
+              <div class="dl-line"></div>
+              <div class="dl-text">Tax Reserve Rate</div>
+              <div class="dl-line"></div>
+            </div>
+            <div class="slider-row">
+              <div class="slider-head">
+                <label class="label" for="fTax">
+                  Set Aside for Taxes
+                  <span class="tip" data-t="Self-employment tax (15.3%) + income tax. Recommended 25–30%. High-tax states need 32–35%." aria-label="Tooltip">?</span>
+                </label>
+                <div class="slider-badge" id="taxDisplay">28%</div>
+              </div>
+              <input type="range" id="fTax" min="10" max="40" value="28" step="1"
+                aria-label="Tax reserve percentage"
+                oninput="document.getElementById('taxDisplay').textContent=this.value+'%';calc()">
+              <div class="field-hint">Recommended: 25–30% for most gig workers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle -->
+        <div class="card" style="margin-bottom:1rem" aria-labelledby="vehicleTitle">
+          <div class="card-head">
+            <div class="card-icon ci-amber" aria-hidden="true">🚗</div>
+            <div class="card-head-info">
+              <div class="card-head-title" id="vehicleTitle">Vehicle & Mileage</div>
+              <div class="card-head-sub">Real driving costs & IRS deduction</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="field-grid">
+              <div class="field">
+                <label class="label" for="fMiles">Miles Driven Today
+                  <span class="tip" data-t="Total miles while active on the app — from first pickup to last drop-off. IRS rate: 67¢/mile (2024)." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <input class="finput no-pre" type="number" id="fMiles" value="80" min="0" step="1" aria-label="Miles driven today" oninput="calc()">
+                </div>
+                <div class="field-hint">IRS deduction: 67¢ per mile (2024)</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fGasPrice">Gas Price / Gallon
+                  <span class="tip" data-t="Current price per gallon at your local gas station. US avg ~$3.40–3.70." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-pre" aria-hidden="true">$</span>
+                  <input class="finput" type="number" id="fGasPrice" value="3.50" min="1" max="10" step="0.01" aria-label="Gas price per gallon" oninput="calc()">
+                </div>
+                <div class="field-hint">US average: ~$3.40–$3.70/gal</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fMPG">Car MPG
+                  <span class="tip" data-t="Miles per gallon for your vehicle. Check fueleconomy.gov for your exact model." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <input class="finput no-pre" type="number" id="fMPG" value="28" min="5" max="120" step="1" aria-label="Car MPG" oninput="calc()">
+                </div>
+                <div class="field-hint">Sedans average 28–35 MPG</div>
+              </div>
+              <div class="field">
+                <label class="label" for="fMaint">Maintenance ¢/Mile
+                  <span class="tip" data-t="Vehicle wear per mile. AAA estimates 8–10¢/mile for gig work. Covers oil, tires, brakes, depreciation." aria-label="Tooltip">?</span>
+                </label>
+                <div class="input-wrap">
+                  <input class="finput no-pre" type="number" id="fMaint" value="9" min="0" max="50" step="0.5" aria-label="Maintenance cost per mile in cents" oninput="calc()">
+                </div>
+                <div class="field-hint">AAA estimate: 8–10¢/mile</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="card" aria-label="Calculator actions">
+          <div class="action-row">
+            <button class="btn btn-em" onclick="calc()" aria-label="Recalculate">
+              ⚡ Recalculate
+            </button>
+            <button class="btn btn-ghost" onclick="resetCalc()" aria-label="Reset all values">
+              🔄 Reset
+            </button>
+            <button class="btn btn-outline-green" onclick="saveCalc()" aria-label="Save calculation locally">
+              💾 Save
+            </button>
+            <button class="btn btn-ghost" onclick="loadCalc()" aria-label="Load saved calculation">
+              📂 Load
+            </button>
+            <span class="saved-chip" id="savedChip" aria-live="polite">✓ Saved!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: RESULTS -->
+      <div class="results-sticky fadeup fadeup-d2" aria-live="polite" aria-label="Calculation results">
+        <div class="results-card">
+
+          <!-- Net profit header -->
+          <div class="res-header">
+            <div class="res-header-label">Today's Net Take-Home</div>
+            <div class="res-net" id="rNet">$89.66</div>
+            <div class="res-sub">After taxes · gas · maintenance · tolls</div>
+            <div class="platform-tag" id="rPlatform">🚗 Uber</div>
+          </div>
+
+          <!-- Health score -->
+          <div class="health-wrap">
+            <div class="health-label">Profit Health Score</div>
+            <div class="health-track">
+              <div class="health-fill" id="healthFill" style="width:72%"
+                role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="health-row">
+              <div class="health-score" id="healthScore" style="color:var(--electric)">72 / 100</div>
+              <div class="health-badge hb-good" id="healthBadge">✅ Good Day</div>
+            </div>
+          </div>
+
+          <!-- Result rows -->
+          <div class="res-rows" role="list">
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:#00D084" aria-hidden="true"></span>Gross + Bonus</div>
+              <div class="rr-val pos" id="rGross">$140.00</div>
+            </div>
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:var(--rose)" aria-hidden="true"></span>Gas Expense</div>
+              <div class="rr-val neg" id="rGas">−$10.00</div>
+            </div>
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:var(--amber)" aria-hidden="true"></span>Maintenance</div>
+              <div class="rr-val neg" id="rMaint">−$7.20</div>
+            </div>
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:#f87171" aria-hidden="true"></span>Tolls & Parking</div>
+              <div class="rr-val neg" id="rTolls">−$5.00</div>
+            </div>
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:var(--sky)" aria-hidden="true"></span>Tax Reserve (28%)</div>
+              <div class="rr-val neg" id="rTax">−$28.14</div>
+            </div>
+            <div class="rr" role="listitem">
+              <div class="rr-label"><span class="rr-dot" style="background:#a3e635" aria-hidden="true"></span>Mileage Deduction Est.</div>
+              <div class="rr-val pos" id="rMileage">+$53.60</div>
+            </div>
+            <div class="rr" style="background:var(--bg-soft)" role="listitem">
+              <div class="rr-label" style="font-weight:700;color:var(--text-1)">
+                <span class="rr-dot" style="background:var(--sky)" aria-hidden="true"></span>
+                <strong>Real Hourly Rate</strong>
+              </div>
+              <div class="rr-val blue" id="rHourly" style="font-size:1rem"><strong>$14.94/hr</strong></div>
+            </div>
+          </div>
+
+          <!-- Projections -->
+          <div class="proj-strip">
+            <div class="health-label">Income Projections</div>
+            <div class="proj-grid">
+              <div class="proj-tile">
+                <div class="proj-tile-label">Weekly</div>
+                <div class="proj-tile-val" id="rWeekly">$448</div>
+              </div>
+              <div class="proj-tile">
+                <div class="proj-tile-label">Monthly</div>
+                <div class="proj-tile-val green" id="rMonthly">$1,793</div>
+              </div>
+              <div class="proj-tile">
+                <div class="proj-tile-label">Tax to Save</div>
+                <div class="proj-tile-val red" id="rTaxMo">$502</div>
+              </div>
+              <div class="proj-tile">
+                <div class="proj-tile-label">Mileage Deduct</div>
+                <div class="proj-tile-val amber" id="rDeductMo">$1,500</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order decision -->
+          <div class="decision-wrap">
+            <div class="health-label" style="margin-bottom:10px">Order Accept / Reject Signal</div>
+            <div class="dec-badge dec-accept" id="decBadge" role="status">
+              <span class="dec-icon" aria-hidden="true">✅</span>
+              <div>
+                <div id="decTitle">Accept Orders</div>
+                <div class="dec-sub" id="decSub">$14.94/hr — above $15 target rate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result actions -->
+          <div class="res-actions">
+            <button class="btn btn-em" onclick="copyResults()" aria-label="Copy results to clipboard">
+              📋 Copy Results
+            </button>
+            <button class="btn btn-ghost" onclick="printPDF()" aria-label="Download as PDF">
+              📄 Download PDF
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Ad 300x250 -->
+        <div class="sidebar-ad">
+          <div class="ad-slot ad-slot-rect" aria-label="Advertisement">
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="9876543210"></ins>
+            <noscript>Advertisement — 300×250 Rectangle (AdSense Slot)</noscript>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MID AD BANNER -->
+  <div class="mid-ad-wrap" aria-label="Advertisement">
+    <div class="ad-slot" style="max-width:728px">
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1122334455"></ins>
+      <noscript>Advertisement — 728×90 Leaderboard (AdSense Slot)</noscript>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <div class="content-wrap">
+
+    <!-- Section 1: How gig taxes work -->
+    <section class="section-block" aria-labelledby="taxH2">
+      <h2 class="section-h2" id="taxH2">📋 How Gig Worker Taxes Work in the USA</h2>
+      <p class="section-intro">
+        As a gig worker, you're classified as an <strong>independent contractor</strong> — meaning no employer withholds taxes from your pay. You're entirely responsible for estimating and paying your own taxes, typically four times per year.
+      </p>
+      <div class="highlight-box">
+        <p>
+          The IRS requires self-employed workers earning over <strong>$400/year</strong> to file Schedule C and pay self-employment (SE) tax at <strong>15.3%</strong> (12.4% Social Security + 2.9% Medicare). On top of that, you owe federal income tax at your bracket rate — usually 10–22% for most gig workers. Combined, most drivers should set aside <strong>25–30%</strong> of net income.
+        </p>
+      </div>
+      <div class="tip-grid">
+        <div class="tip-tile">
+          <div class="tip-icon">📅</div>
+          <div class="tip-title">Quarterly Estimated Taxes</div>
+          <div class="tip-text">Pay IRS estimated taxes four times per year (April, June, September, January). Missing payments triggers underpayment penalties of ~8% per year. Use Form 1040-ES to estimate and pay online at IRS.gov.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🧾</div>
+          <div class="tip-title">Schedule C Deductions</div>
+          <div class="tip-text">Every dollar spent on gas, maintenance, phone data (business portion), car insurance (business %), tolls, and even dash cam accessories is potentially deductible on Schedule C — directly reducing your taxable income.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">📱</div>
+          <div class="tip-title">Phone Bill Deduction</div>
+          <div class="tip-text">The business-use portion of your monthly phone bill — often 50–80% for full-time gig workers — is fully deductible. Keep records of your monthly plan cost and document business usage percentage.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">💡</div>
+          <div class="tip-title">Half SE Tax Write-Off</div>
+          <div class="tip-text">The IRS allows you to deduct 50% of your self-employment tax from your gross income — reducing the base on which income tax is calculated. This is an often-overlooked deduction that saves hundreds of dollars.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Mileage deduction -->
+    <section class="section-block" aria-labelledby="mileageH2">
+      <h2 class="section-h2" id="mileageH2">🗺️ IRS Mileage Deduction Explained Simply</h2>
+      <p class="section-intro">
+        The IRS Standard Mileage Rate for 2024 is <strong>67 cents per mile</strong> driven for business. This is one of the single most valuable tax deductions available to gig workers and requires almost no extra work to claim.
+      </p>
+      <div class="highlight-box">
+        <p>
+          If you drive <strong>20,000 miles</strong> for gig work in a year, you can claim a <strong>$13,400 deduction</strong> on Schedule C. At a 22% federal income tax rate, that deduction alone saves you over <strong>$2,948 in taxes</strong>. You must keep a contemporaneous log — a mileage tracking app is the easiest way to do this correctly.
+        </p>
+      </div>
+      <div class="tip-grid">
+        <div class="tip-tile">
+          <div class="tip-icon">📍</div>
+          <div class="tip-title">Track Every Mile</div>
+          <div class="tip-text">Use an automatic mileage tracker like MileIQ, Everlance, or Hurdlr. The IRS requires a contemporaneous log — reconstructing miles from memory at tax time doesn't hold up under audit.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🔄</div>
+          <div class="tip-title">Standard vs. Actual Method</div>
+          <div class="tip-text">You can use the standard rate (67¢/mile) or track actual expenses (gas + depreciation + insurance + repairs). Standard is simpler; actual may save more for high-mileage vehicles with low MPG.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">📊</div>
+          <div class="tip-title">Deduction = Tax Savings</div>
+          <div class="tip-text">A deduction reduces your taxable income — it's not a dollar-for-dollar refund. At a 22% combined tax rate, every $1,000 in deductions saves approximately $220 in taxes owed.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Tax saving tips -->
+    <section class="section-block" aria-labelledby="tipsH2">
+      <h2 class="section-h2" id="tipsH2">💡 Best Tax Saving Strategies for Gig Workers</h2>
+      <p class="section-intro">
+        Smart gig workers treat their work like a small business. These strategies can legally reduce your tax bill by hundreds — or thousands — of dollars per year.
+      </p>
+      <div class="tip-grid">
+        <div class="tip-tile">
+          <div class="tip-icon">🏦</div>
+          <div class="tip-title">Open a SEP-IRA</div>
+          <div class="tip-text">Self-employed workers can contribute up to 25% of net earnings (max $66,000 in 2024) to a SEP-IRA. Contributions are 100% tax-deductible and reduce your taxable income dramatically while building retirement savings.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🧳</div>
+          <div class="tip-title">Self-Employed Health Insurance</div>
+          <div class="tip-text">If you pay for your own health, dental, and vision insurance, premiums are 100% deductible from gross income as a self-employed person — even if you don't itemize deductions on Schedule A.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🏧</div>
+          <div class="tip-title">Separate Business Account</div>
+          <div class="tip-text">Keep a dedicated checking account for gig earnings and expenses. This simplifies bookkeeping, prevents missed deductions, and is a best practice that reduces audit risk significantly.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🖥️</div>
+          <div class="tip-title">Home Office Deduction</div>
+          <div class="tip-text">Freelancers with a dedicated workspace qualify for the home office deduction. Use the IRS simplified method: $5 per square foot (up to 300 sq ft = $1,500/year). The space must be used regularly and exclusively for business.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">📝</div>
+          <div class="tip-title">Save Every Receipt</div>
+          <div class="tip-text">Car washes (for rideshare), dashboard cameras, phone mounts, insulated delivery bags, water bottles for passengers, and even work gloves may be deductible. Small receipts add up to hundreds in deductions annually.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🧮</div>
+          <div class="tip-title">Use Self-Employment Tax Software</div>
+          <div class="tip-text">TurboTax Self-Employed, H&R Block Premium, or FreeTaxUSA guide you through every deduction available to gig workers. The software cost itself is a deductible business expense — often saving 5–10× its cost in found deductions.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Good hourly rate -->
+    <section class="section-block" aria-labelledby="hourlyH2">
+      <h2 class="section-h2" id="hourlyH2">⏱️ What Is a Good Hourly Rate for Gig Workers?</h2>
+      <p class="section-intro">
+        The single most important number to know as a gig worker is your <strong>real net hourly rate</strong> — what you actually earn after gas, maintenance, and taxes. Never evaluate a shift by gross earnings alone.
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>Target $15–20/hour net</strong> after all expenses. Below $12/hour net, traditional W-2 employment (which includes employer-paid FICA, benefits, and no vehicle wear) is often more financially advantageous. Use our calculator to compute your real rate — it may surprise you.
+        </p>
+      </div>
+      <div class="tip-grid">
+        <div class="tip-tile">
+          <div class="tip-icon">✅</div>
+          <div class="tip-title">Excellent: $20+ Net/Hour</div>
+          <div class="tip-text">You're earning well above the effective wage floor. This typically means working peak hours (Friday/Saturday nights, lunch rushes) with efficient routes and minimal idle time. Keep it up and maximize these shifts.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">⚠️</div>
+          <div class="tip-title">Acceptable: $15–20 Net/Hour</div>
+          <div class="tip-text">You're at or slightly above the recommended minimum. Consider strategies to increase efficiency: accept higher-value orders, reduce dead miles between deliveries, and work during surge periods to push into the excellent tier.</div>
+        </div>
+        <div class="tip-tile">
+          <div class="tip-icon">🔴</div>
+          <div class="tip-title">Below Target: Under $15/Hour</div>
+          <div class="tip-text">Re-evaluate your strategy. You may be accepting too many low-value orders, working off-peak hours, driving a low-MPG vehicle, or working in a low-demand market. Consider switching platforms or working different hours.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliate section -->
+    <div class="aff-section" aria-labelledby="affH">
+      <div class="aff-section-h" id="affH">🛠️ Recommended Tools for Gig Workers</div>
+      <div class="aff-note">These tools help you track earnings, save on taxes, and manage your gig income like a pro. <em>(Some links may be affiliate links — they help keep this calculator free.)</em></div>
+      <div class="aff-grid">
+        <div class="aff-card">
+          <div class="aff-card-icon">🧮</div>
+          <div class="aff-card-title">TurboTax Self-Employed</div>
+          <div class="aff-card-desc">Built specifically for gig workers and freelancers. Finds every industry-specific deduction automatically. Imports directly from Uber, Lyft, and DoorDash.</div>
+          <a href="#" class="aff-link" onclick="return false">Try Free →</a>
+        </div>
+        <div class="aff-card">
+          <div class="aff-card-icon">📍</div>
+          <div class="aff-card-title">MileIQ</div>
+          <div class="aff-card-desc">Automatic mileage tracking that runs in the background. Just drive — it classifies every trip for IRS-compliant mileage logs. Used by 1M+ gig workers.</div>
+          <a href="#" class="aff-link" onclick="return false">Start Free →</a>
+        </div>
+        <div class="aff-card">
+          <div class="aff-card-icon">💼</div>
+          <div class="aff-card-title">Hurdlr</div>
+          <div class="aff-card-desc">All-in-one app: automatic mileage, expense, income tracking, and real-time tax estimates. The most complete financial app built for gig economy workers.</div>
+          <a href="#" class="aff-link" onclick="return false">Get Hurdlr →</a>
+        </div>
+        <div class="aff-card">
+          <div class="aff-card-icon">🏦</div>
+          <div class="aff-card-title">Lili Business Banking</div>
+          <div class="aff-card-desc">Free business bank account for freelancers with built-in automatic tax savings buckets. Separates your business and personal money effortlessly.</div>
+          <a href="#" class="aff-link" onclick="return false">Open Free →</a>
+        </div>
+        <div class="aff-card">
+          <div class="aff-card-icon">📊</div>
+          <div class="aff-card-title">QuickBooks Self-Employed</div>
+          <div class="aff-card-desc">Track income and expenses, estimate quarterly taxes, and export directly to TurboTax at tax time. Perfect for freelancers earning from multiple gig platforms.</div>
+          <a href="#" class="aff-link" onclick="return false">Learn More →</a>
+        </div>
+        <div class="aff-card">
+          <div class="aff-card-icon">🛡️</div>
+          <div class="aff-card-title">Stride Tax</div>
+          <div class="aff-card-desc">100% free mileage and expense tracker designed for gig workers. Also helps you find affordable health insurance as a self-employed individual.</div>
+          <a href="#" class="aff-link" onclick="return false">Free Download →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="section-block" aria-labelledby="faqH2">
+      <h2 class="section-h2" id="faqH2">❓ Frequently Asked Questions</h2>
+      <div class="faq-list" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            How much tax should I set aside as a gig worker?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            Most gig workers should set aside <strong>25–30% of net earnings</strong>. This covers the 15.3% self-employment tax (Social Security + Medicare) plus federal income tax (10–22% for most gig workers). Residents of high-tax states like California, New York, or New Jersey should set aside 32–35% to cover state income tax. Our calculator defaults to 28%, which is safe for most situations. Pay quarterly estimated taxes using IRS Form 1040-ES to avoid underpayment penalties.
+          </div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            What is the IRS mileage deduction rate for 2024?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            The IRS standard mileage rate for 2024 is <strong>67 cents per mile</strong> driven for business purposes. Gig workers track miles from the moment they accept a trip or delivery through the end of that trip. For 20,000 business miles, this equals a $13,400 deduction on Schedule C. You must choose between the standard mileage rate or actual vehicle expenses — you cannot combine both methods in the same year. Track every mile with an app like MileIQ or Everlance to stay IRS-compliant.
+          </div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            What is a good net hourly rate for Uber or DoorDash drivers?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            After all expenses, most financial advisors recommend gig workers target at least <strong>$15–20/hour net</strong>. Below $12/hour net, traditional W-2 employment — which provides employer-paid FICA taxes, no vehicle depreciation, and often benefits — may be more financially advantageous. Never evaluate your earnings on gross pay; always calculate after gas, maintenance, and taxes. Use our calculator to find your true hourly rate by entering today's earnings and expenses.
+          </div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            Should I accept low-tip orders on DoorDash or Instacart?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            The widely-recommended rule among experienced gig drivers: reject orders paying less than <strong>$1.50 per mile</strong>, or those that would result in under $15/hour net after expenses. Long-distance, low-pay orders are rarely worth it once fuel and vehicle wear are factored in. On DoorDash, the "$2/mile minimum" is a common rule among top earners. On Instacart, heavy or complex orders often take longer than estimated. Use our calculator to evaluate every order before accepting — plug in the estimated mileage and payment to see the real picture.
+          </div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            Do I need to file quarterly taxes as a gig worker?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            Yes. If you expect to owe <strong>$1,000 or more</strong> in taxes for the full year from self-employment, the IRS requires quarterly estimated payments. The 2024 due dates are: April 15 (Q1), June 17 (Q2), September 16 (Q3), and January 15, 2025 (Q4). Pay online at IRS.gov using IRS Direct Pay — no account required. Missing or underpaying quarterly estimates results in a penalty of approximately 8% per year (the 2024 rate) applied to the underpaid amount.
+          </div></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="faqToggle(this)" aria-expanded="false">
+            Can I deduct my car payment or insurance as a gig worker?
+            <span class="faq-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-body">
+            If you use the <strong>actual expense method</strong> instead of the standard mileage rate, you can deduct the business-use percentage of your car insurance, registration, oil changes, repairs, and depreciation. The business-use percentage is calculated as business miles ÷ total miles driven for the year. Car loan interest is also deductible under the actual method. If you purchased a vehicle primarily for gig work, Section 179 of the tax code may allow a large first-year depreciation deduction. Consult a CPA to determine which method saves more in your specific situation.
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Ad -->
+    <div style="display:flex;justify-content:center;padding:1rem 0 2rem">
+      <div class="ad-slot" style="max-width:728px" aria-label="Advertisement">
+        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="5566778899"></ins>
+        <noscript>Advertisement — 728×90 Leaderboard (AdSense Slot)</noscript>
+      </div>
+    </div>
+
+  </div><!-- end content-wrap -->
+</div><!-- end page-home -->
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+
+    <!-- Developer section -->
+    <div class="footer-dev">
+      <div class="footer-dev-avatar" aria-hidden="true">D</div>
+      <div class="footer-dev-info">
+        <div class="footer-dev-name">Dilshan Nayanajith Ilangasinghe</div>
+        <div class="footer-dev-role">Developer & Creator · Undergraduate Student (BBST & BBA)</div>
+        <div class="footer-dev-desc">
+          Dilshan is an undergraduate student studying Business Information Technology (BBST) and Business Administration (BBA), with hands-on experience building digital tools and small applications. GigCalcPro was created to help gig workers across the USA better understand and manage their real earnings after taxes and expenses.
+          <br><a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:rgba(0,208,132,0.8);margin-top:4px;display:inline-block">nayanajithilangasinghe2002@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap" style="margin-bottom:10px">
+          <div class="logo-mark" aria-hidden="true">💰</div>
+          <span class="logo-text" style="color:#fff">GigCalc<span>Pro</span></span>
+        </div>
+        <p>Free gig worker tax and earnings calculator for USA platforms. Calculate net profit, real hourly rate, and mileage deductions instantly.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculator</h4>
+        <ul>
+          <li><a href="#calculator">Earnings Calculator</a></li>
+          <li><a href="#calculator">Tax Estimator</a></li>
+          <li><a href="#calculator">Mileage Deduction</a></li>
+          <li><a href="#calculator">Hourly Rate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#taxH2">Gig Worker Tax Guide</a></li>
+          <li><a href="#mileageH2">Mileage Guide</a></li>
+          <li><a href="#tipsH2">Tax Tips</a></li>
+          <li><a href="#faqH2">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><button onclick="openModal('about')">About Us</button></li>
+          <li><button onclick="openModal('contact')">Contact</button></li>
+          <li><button onclick="openModal('privacy')">Privacy Policy</button></li>
+          <li><button onclick="openModal('terms')">Terms & Conditions</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 GigCalcPro · Created by Dilshan Nayanajith Ilangasinghe</p>
+      <p>Built for gig workers across the USA 🇺🇸</p>
+    </div>
+    <p class="footer-disclaimer">
+      <strong>Disclaimer:</strong> GigCalcPro is an informational tool only. All calculations are estimates based on user-provided inputs and current IRS standard rates. This website does not provide professional tax, legal, or financial advice. Consult a licensed CPA or tax professional for personalized guidance. We are not affiliated with Uber, DoorDash, Lyft, Instacart, Amazon, or any other gig platform mentioned. Tax laws and IRS rates may change — always verify current rates at IRS.gov.
+    </p>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="mob-cta" aria-label="Mobile calculator call to action">
+  <button class="mob-cta-btn" onclick="scrollToCalc()">
+    <span aria-hidden="true">⚡</span> Calculate My Real Earnings
+  </button>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+<!-- ============ MODAL: ABOUT ============ -->
+<div class="modal-overlay" id="modal-about" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle" onclick="closeModalOverlay(event,this)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 class="modal-title" id="aboutModalTitle">About GigCalcPro</h2>
+      <button class="modal-close" onclick="closeModal('about')" aria-label="Close about dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="policy-updated">Last updated: November 2024</div>
+
+      <h3>What is GigCalcPro?</h3>
+      <p>GigCalcPro is a free, browser-based financial calculator designed specifically for gig economy workers in the United States. It helps Uber drivers, DoorDash couriers, Lyft drivers, Instacart shoppers, Amazon Flex delivery partners, and freelancers understand their real take-home earnings after all expenses and taxes.</p>
+      <p>Unlike basic earnings apps that show only gross pay, GigCalcPro calculates your <strong>actual net profit</strong> — after accounting for gas costs, vehicle maintenance, self-employment taxes, mileage deductions, tolls, and parking. We also provide weekly and monthly income projections based on your working schedule.</p>
+
+      <h3>Our Mission</h3>
+      <p>Millions of American gig workers underestimate their true expenses and overestimate their real earnings. Our mission is simple: give every gig worker — regardless of financial background — the tools to make smarter decisions about which orders to accept, how much to set aside for taxes, and whether their current platform and strategy is financially sustainable.</p>
+
+      <h3>How the Calculator Works</h3>
+      <p>All calculations happen entirely in your browser using JavaScript. You enter your daily earnings, hours, miles driven, gas price, and vehicle information. The calculator applies IRS standard rates (2024 mileage rate: $0.67/mile), standard self-employment tax rules (15.3%), and your specified tax reserve percentage to compute:</p>
+      <ul>
+        <li>Net take-home pay after all expenses</li>
+        <li>Real hourly wage (not the inflated gross number)</li>
+        <li>Tax reserve amount to set aside</li>
+        <li>IRS mileage deduction estimate</li>
+        <li>Weekly and monthly income projections</li>
+        <li>Profit health score (0–100) and order accept/reject recommendation</li>
+      </ul>
+      <p>No data is ever sent to a server. No account is required. All calculations are estimates — always consult a licensed tax professional for official tax advice.</p>
+
+      <h3>About the Developer</h3>
+      <div class="dev-card">
+        <div class="dev-avatar" aria-hidden="true">D</div>
+        <div>
+          <div class="dev-name">Dilshan Nayanajith Ilangasinghe</div>
+          <div class="dev-title">Developer & Creator · Undergraduate Student</div>
+          <div class="dev-bio">
+            Dilshan is an undergraduate student pursuing degrees in Business Information Systems Technology (BBST) and Business Administration (BBA). With experience building several small applications and digital tools, he created GigCalcPro to bridge the gap between complex tax knowledge and the practical needs of everyday gig workers.
+            <br><br>
+            GigCalcPro combines his interests in financial literacy, technology, and helping underserved communities — specifically the millions of gig economy workers who often lack access to professional tax guidance.
+          </div>
+          <div class="dev-links">
+            <a class="dev-link" href="mailto:nayanajithilangasinghe2002@gmail.com">✉️ Email</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Important Disclaimer</h3>
+      <p>GigCalcPro is for informational and educational purposes only. It is not a substitute for professional tax, legal, or financial advice. Calculations are estimates based on IRS standard rates and user-provided inputs. Always consult a licensed CPA or enrolled agent for personalized tax guidance. Tax laws change — verify all rates at IRS.gov.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: CONTACT ============ -->
+<div class="modal-overlay" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" onclick="closeModalOverlay(event,this)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 class="modal-title" id="contactModalTitle">Contact Us</h2>
+      <button class="modal-close" onclick="closeModal('contact')" aria-label="Close contact dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Get in Touch</h3>
+      <p>Have a question about the calculator, a suggestion for improvement, or a business inquiry? We'd love to hear from you. Fill out the form below or email us directly at <a href="mailto:nayanajithilangasinghe2002@gmail.com">nayanajithilangasinghe2002@gmail.com</a>.</p>
+
+      <div class="cform" id="cForm" novalidate>
+        <div class="cfield">
+          <label class="clabel" for="cName">Full Name <span style="color:var(--rose)">*</span></label>
+          <input class="cinput" type="text" id="cName" placeholder="Your full name" autocomplete="name">
+        </div>
+        <div class="cfield">
+          <label class="clabel" for="cEmail">Email Address <span style="color:var(--rose)">*</span></label>
+          <input class="cinput" type="email" id="cEmail" placeholder="your@email.com" autocomplete="email">
+        </div>
+        <div class="cfield">
+          <label class="clabel" for="cSubject">Subject</label>
+          <input class="cinput" type="text" id="cSubject" placeholder="How can we help?">
+        </div>
+        <div class="cfield">
+          <label class="clabel" for="cMessage">Message <span style="color:var(--rose)">*</span></label>
+          <textarea class="cinput" id="cMessage" placeholder="Tell us more..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitContact(event)">Send Message</button>
+        <div class="form-success" id="formSuccess" role="alert">
+          ✅ Thank you! Your message has been received. We'll respond within 2–3 business days.
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem">Direct Contact</h3>
+      <p><strong>Email:</strong> <a href="mailto:nayanajithilangasinghe2002@gmail.com">nayanajithilangasinghe2002@gmail.com</a></p>
+      <p><strong>Response time:</strong> Within 2–3 business days</p>
+      <p><strong>For tax questions:</strong> Please note we cannot provide professional tax advice. For tax matters, consult a licensed CPA or enrolled agent.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: PRIVACY POLICY ============ -->
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" onclick="closeModalOverlay(event,this)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 class="modal-title" id="privacyModalTitle">Privacy Policy</h2>
+      <button class="modal-close" onclick="closeModal('privacy')" aria-label="Close privacy policy dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="policy-updated">Effective Date: November 1, 2024 · Last Updated: November 2024</div>
+
+      <p>This Privacy Policy describes how GigCalcPro ("we," "us," or "our") handles information when you use our website at gigcalcpro.com (the "Site"). We take your privacy seriously and are committed to being transparent about our practices.</p>
+
+      <h3>1. Information We Collect</h3>
+      <p><strong>Calculator Inputs:</strong> All data you enter into the calculator (earnings, miles, gas prices, etc.) is processed entirely within your browser. This data is <strong>never transmitted to our servers</strong> and never stored remotely. If you use the "Save" feature, data is stored only in your browser's localStorage — it never leaves your device.</p>
+      <p><strong>Contact Form:</strong> When you submit our contact form, your name, email address, subject, and message may be received by us for the purpose of responding to your inquiry. This information is used solely to respond to you and is not sold, rented, or shared with third parties.</p>
+      <p><strong>Automatically Collected Data:</strong> Like most websites, we may collect standard log data including your IP address, browser type, referring URLs, pages visited, and time spent on the site. This data is used in aggregate for site analytics and improving user experience.</p>
+
+      <h3>2. Cookies and Tracking Technologies</h3>
+      <p>We use the following types of cookies:</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> Required for basic site functionality, including dark/light mode preferences stored in localStorage.</li>
+        <li><strong>Analytics Cookies:</strong> We may use Google Analytics to understand how visitors interact with our Site. This data is anonymized and aggregated. You can opt out at <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</li>
+        <li><strong>Advertising Cookies (Google AdSense):</strong> Our Site may display advertisements served by Google AdSense. Google uses cookies to serve ads based on your prior visits to our Site or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our Site and/or other sites on the Internet. See Google's Privacy Policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+      </ul>
+
+      <h3>3. How We Use Your Information</h3>
+      <ul>
+        <li>To provide and improve the calculator service</li>
+        <li>To respond to contact form submissions</li>
+        <li>To analyze site traffic and usage patterns (in aggregate, anonymized form)</li>
+        <li>To serve relevant advertisements through Google AdSense</li>
+        <li>To ensure site security and prevent abuse</li>
+      </ul>
+
+      <h3>4. Data Sharing and Sale</h3>
+      <p>We <strong>do not sell, rent, or trade</strong> your personal information to third parties. We do not share your personal data except:</p>
+      <ul>
+        <li>With service providers that assist us in operating the website (e.g., hosting, analytics), under strict confidentiality agreements</li>
+        <li>As required by law, legal process, or governmental authority</li>
+        <li>To protect the rights, property, or safety of our users or the public</li>
+      </ul>
+
+      <h3>5. localStorage and Local Data Storage</h3>
+      <p>The "Save" feature stores your calculator inputs in your browser's localStorage — a client-side storage mechanism built into modern browsers. This data exists only on your device and can be cleared at any time by clearing your browser's local storage or site data. We have no access to data stored in your localStorage.</p>
+
+      <h3>6. Third-Party Links and Affiliate Links</h3>
+      <p>Our Site contains links to third-party websites (such as TurboTax, MileIQ, and other recommended tools). These are affiliate links that may earn us a commission if you make a purchase. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.</p>
+
+      <h3>7. Children's Privacy</h3>
+      <p>Our Site is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete that information.</p>
+
+      <h3>8. Your Rights</h3>
+      <p>Depending on your location, you may have rights including the right to access, correct, or delete personal data we hold about you. To exercise these rights, contact us at nayanajithilangasinghe2002@gmail.com.</p>
+
+      <h3>9. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. We will indicate the date of the most recent update at the top of this page. Continued use of the Site after changes constitutes acceptance of the updated policy.</p>
+
+      <h3>10. Contact</h3>
+      <p>For privacy-related questions, contact us at: <a href="mailto:nayanajithilangasinghe2002@gmail.com">nayanajithilangasinghe2002@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: TERMS & CONDITIONS ============ -->
+<div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle" onclick="closeModalOverlay(event,this)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 class="modal-title" id="termsModalTitle">Terms & Conditions</h2>
+      <button class="modal-close" onclick="closeModal('terms')" aria-label="Close terms dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="policy-updated">Effective Date: November 1, 2024 · Last Updated: November 2024</div>
+
+      <p>Welcome to GigCalcPro. By accessing or using our website at gigcalcpro.com (the "Site"), you agree to be bound by these Terms and Conditions ("Terms"). Please read them carefully. If you do not agree with these Terms, please do not use our Site.</p>
+
+      <h3>1. Informational Purposes Only</h3>
+      <p>GigCalcPro is provided <strong>for informational and educational purposes only</strong>. The calculator, content, articles, and all information on this Site are intended to help users understand general financial concepts related to gig work and self-employment taxes in the USA. Nothing on this Site constitutes, or should be construed as, professional financial, tax, legal, or accounting advice.</p>
+
+      <h3>2. No Professional Advice</h3>
+      <p>The information provided on this Site does not constitute tax advice, legal advice, or financial planning services. GigCalcPro is not a licensed tax professional, CPA, enrolled agent, or financial advisor. For advice specific to your individual tax situation, you should consult a qualified, licensed professional. Tax laws are complex and subject to change — always verify current rules with the IRS at IRS.gov or a licensed tax professional.</p>
+
+      <h3>3. Estimates Only — No Guarantee of Accuracy</h3>
+      <p>All calculator outputs are <strong>estimates only</strong>. Results are based on user-provided inputs and current IRS standard rates as of 2024. Actual tax obligations, expenses, and earnings may differ substantially from calculated estimates. Factors that may affect accuracy include:</p>
+      <ul>
+        <li>Changes in IRS mileage rates or tax law after publication</li>
+        <li>State and local tax obligations not reflected in the calculator</li>
+        <li>Individual vehicle performance variations</li>
+        <li>Platform-specific earnings rules and fee structures</li>
+        <li>Inaccurate or incomplete user inputs</li>
+      </ul>
+      <p>GigCalcPro makes no warranty, express or implied, regarding the accuracy, completeness, reliability, or fitness for a particular purpose of any calculation or content on the Site.</p>
+
+      <h3>4. User Responsibility</h3>
+      <p>By using this Site, you acknowledge and agree that:</p>
+      <ul>
+        <li>You are solely responsible for all financial, tax, and business decisions you make based on information from this Site</li>
+        <li>You will independently verify any calculations or information before acting on them</li>
+        <li>GigCalcPro bears no responsibility or liability for any financial loss, tax penalty, audit, or other negative outcome arising from your use of this Site</li>
+        <li>You will consult appropriate licensed professionals for your specific tax and financial needs</li>
+      </ul>
+
+      <h3>5. Platform Affiliations</h3>
+      <p>GigCalcPro is an independent website and is <strong>not affiliated with, endorsed by, or sponsored by</strong> Uber Technologies, DoorDash Inc., Lyft Inc., Maplebear Inc. (Instacart), Amazon.com Inc. (Amazon Flex), or any other gig platform mentioned on this Site. All platform names and trademarks are the property of their respective owners.</p>
+
+      <h3>6. Affiliate Disclosure</h3>
+      <p>Some links on this Site may be affiliate links. If you click an affiliate link and make a qualifying purchase, we may receive a commission at no additional cost to you. We only recommend tools we believe are genuinely useful for gig workers. Our editorial opinions are not influenced by affiliate relationships.</p>
+
+      <h3>7. Advertising</h3>
+      <p>This Site may display advertisements served by Google AdSense and other ad networks. The presence of advertising does not constitute an endorsement of any advertised product or service. We are not responsible for the content of third-party advertisements.</p>
+
+      <h3>8. Intellectual Property</h3>
+      <p>All content on this Site — including text, code, design, graphics, and branding — is owned by or licensed to GigCalcPro. You may not reproduce, distribute, modify, or create derivative works without prior written permission, except for personal, non-commercial use.</p>
+
+      <h3>9. Limitation of Liability</h3>
+      <p>To the maximum extent permitted by law, GigCalcPro and its creator Dilshan Nayanajith Ilangasinghe shall not be liable for any direct, indirect, incidental, consequential, special, or punitive damages arising from your use of, or inability to use, this Site or its content — including but not limited to tax penalties, audits, lost income, or reliance on calculator estimates.</p>
+
+      <h3>10. Changes to Terms</h3>
+      <p>We reserve the right to modify these Terms at any time. The effective date at the top of this page will be updated accordingly. Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
+
+      <h3>11. Governing Law</h3>
+      <p>These Terms shall be governed by the laws of the United States. Any disputes shall be resolved through binding arbitration in accordance with applicable law.</p>
+
+      <h3>12. Contact</h3>
+      <p>For questions about these Terms, contact: <a href="mailto:nayanajithilangasinghe2002@gmail.com">nayanajithilangasinghe2002@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+/* =============================================
+   CONSTANTS & STATE
+   ============================================= */
+const IRS_RATE = 0.67;  // 2024 IRS standard mileage rate
+const MIN_HR   = 15;    // Minimum acceptable net hourly rate
+let platform = 'Uber', platformEmoji = '🚗';
+
+/* =============================================
+   DARK MODE
+   ============================================= */
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  document.getElementById('darkBtn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('gcp_dark', isDark ? '1' : '0');
+}
+(function initDark() {
+  if (localStorage.getItem('gcp_dark') === '1') {
+    document.body.classList.add('dark');
+    document.getElementById('darkBtn').textContent = '☀️';
+  }
+})();
+
+/* =============================================
+   PLATFORM SELECTION
+   ============================================= */
+function setPlatform(btn, name, emoji) {
+  document.querySelectorAll('.p-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+  platform = name;
+  platformEmoji = emoji;
+  calc();
+}
+
+/* =============================================
+   UTILITY
+   ============================================= */
+function gv(id, fb=0) {
+  const v = parseFloat(document.getElementById(id).value);
+  return isNaN(v) ? fb : v;
+}
+function fmt(n, sign='') {
+  const abs = Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  return sign + '$' + abs;
+}
+function fmtInt(n) {
+  return '$' + Math.round(Math.abs(n)).toLocaleString('en-US');
+}
+function setRR(id, text, cls) {
+  const el = document.getElementById(id);
+  el.textContent = text;
+  el.className = 'rr-val ' + cls + ' pop';
+  setTimeout(() => el.classList.remove('pop'), 350);
+}
+
+/* =============================================
+   MAIN CALCULATION
+   ============================================= */
+function calc() {
+  const gross   = gv('fGross');
+  const bonus   = gv('fBonus');
+  const hours   = Math.max(0.5, gv('fHours', 1));
+  const days    = Math.max(1, Math.min(7, gv('fDays', 5)));
+  const tolls   = gv('fTolls');
+  const taxPct  = gv('fTax', 28) / 100;
+  const miles   = gv('fMiles');
+  const gasP    = gv('fGasPrice', 3.5);
+  const mpg     = Math.max(1, gv('fMPG', 28));
+  const maint   = gv('fMaint', 9) / 100; // ¢ → $
+
+  const totalGross = gross + bonus;
+  const gasCost    = (miles / mpg) * gasP;
+  const maintCost  = miles * maint;
+  const mileDeduct = miles * IRS_RATE;
+  const netPreTax  = totalGross - gasCost - maintCost - tolls;
+  const taxRes     = Math.max(0, netPreTax) * taxPct;
+  const net        = netPreTax - taxRes;
+  const hourly     = hours > 0 ? net / hours : 0;
+  const weekly     = net * days;
+  const monthly    = weekly * 4.33;
+  const taxMo      = taxRes * days * 4.33;
+  const deductMo   = mileDeduct * days * 4.33;
+
+  // Health score
+  let hs = 0;
+  if (net > 0)          hs += 25;
+  if (hourly >= 20)     hs += 40;
+  else if (hourly >= 15) hs += 28;
+  else if (hourly >= 10) hs += 14;
+  const gasRatio = totalGross > 0 ? gasCost / totalGross : 1;
+  if (gasRatio < 0.08)  hs += 20;
+  else if (gasRatio < 0.15) hs += 12;
+  if (mileDeduct > gasCost) hs += 15;
+  hs = Math.min(100, Math.max(0, hs));
+
+  // Update net
+  const netEl = document.getElementById('rNet');
+  netEl.textContent = fmt(net, net < 0 ? '−' : '');
+  netEl.className = 'res-net' + (net < 0 ? ' negative' : '');
+  document.getElementById('rPlatform').textContent = platformEmoji + ' ' + platform;
+
+  // Update row values
+  setRR('rGross',   fmt(totalGross),         'pos');
+  setRR('rGas',     '−' + fmt(gasCost),       'neg');
+  setRR('rMaint',   '−' + fmt(maintCost),     'neg');
+  setRR('rTolls',   '−' + fmt(tolls),         'neg');
+  setRR('rTax',     '−' + fmt(taxRes),        'neg');
+  setRR('rMileage', '+' + fmt(mileDeduct),    'pos');
+
+  // Tax row label
+  document.querySelector('#rTax').closest('.rr').querySelector('.rr-label').innerHTML =
+    '<span class="rr-dot" style="background:var(--sky)" aria-hidden="true"></span>Tax Reserve (' + Math.round(gv('fTax',28)) + '%)';
+
+  const hEl = document.getElementById('rHourly');
+  hEl.innerHTML = '<strong>' + fmt(hourly) + '/hr</strong>';
+  hEl.className = 'rr-val blue pop';
+  setTimeout(() => hEl.classList.remove('pop'), 350);
+
+  // Projections
+  document.getElementById('rWeekly').textContent   = fmtInt(weekly);
+  document.getElementById('rMonthly').textContent  = fmtInt(monthly);
+  document.getElementById('rTaxMo').textContent    = fmtInt(taxMo);
+  document.getElementById('rDeductMo').textContent = fmtInt(deductMo);
+
+  // Health bar
+  const fillEl = document.getElementById('healthFill');
+  fillEl.style.width = hs + '%';
+  fillEl.setAttribute('aria-valuenow', hs);
+  let hColor, hClass, hLabel;
+  if (hs >= 70) {
+    hColor = 'var(--electric)'; hClass = 'hb-good'; hLabel = '✅ Good Day';
+    fillEl.style.background = 'linear-gradient(90deg,var(--electric),#3B8DFF)';
+  } else if (hs >= 45) {
+    hColor = 'var(--amber)'; hClass = 'hb-avg'; hLabel = '⚠️ Average Day';
+    fillEl.style.background = 'linear-gradient(90deg,var(--amber),#f59e0b)';
+  } else {
+    hColor = 'var(--rose)'; hClass = 'hb-low'; hLabel = '🔴 Low Profit Day';
+    fillEl.style.background = 'linear-gradient(90deg,var(--rose),#ef4444)';
+  }
+  const hsEl = document.getElementById('healthScore');
+  hsEl.textContent = hs + ' / 100';
+  hsEl.style.color = hColor;
+  const hbEl = document.getElementById('healthBadge');
+  hbEl.textContent = hLabel;
+  hbEl.className = 'health-badge ' + hClass;
+
+  // Order decision
+  const decEl = document.getElementById('decBadge');
+  let decClass, decTitle, decSub;
+  if (hourly >= MIN_HR) {
+    decClass = 'dec-accept'; decTitle = '✅ Accept Orders';
+    decSub = fmt(hourly) + '/hr — above $' + MIN_HR + ' target';
+  } else if (hourly >= 10) {
+    decClass = 'dec-caution'; decTitle = '⚠️ Use Caution';
+    decSub = fmt(hourly) + '/hr — below recommended $' + MIN_HR;
+  } else {
+    decClass = 'dec-reject'; decTitle = '🚫 Reject / Log Off';
+    decSub = fmt(hourly) + '/hr — not profitable right now';
+  }
+  decEl.className = 'dec-badge ' + decClass;
+  document.getElementById('decTitle').textContent = decTitle;
+  document.getElementById('decSub').textContent = decSub;
+}
+
+/* =============================================
+   RESET
+   ============================================= */
+function resetCalc() {
+  const defs = {fGross:120,fBonus:20,fHours:6,fDays:5,fTolls:5,fTax:28,fMiles:80,fGasPrice:3.50,fMPG:28,fMaint:9};
+  Object.entries(defs).forEach(([id,v]) => document.getElementById(id).value = v);
+  document.getElementById('taxDisplay').textContent = '28%';
+  document.querySelectorAll('.p-btn').forEach(b => {
+    const isU = b.textContent.trim().includes('Uber');
+    b.classList.toggle('active', isU);
+    b.setAttribute('aria-pressed', isU ? 'true' : 'false');
+  });
+  platform = 'Uber'; platformEmoji = '🚗';
+  calc();
+  toast('🔄 Reset to defaults');
+}
+
+/* =============================================
+   SAVE / LOAD (localStorage)
+   ============================================= */
+function saveCalc() {
+  try {
+    const data = {
+      platform, platformEmoji,
+      fGross: document.getElementById('fGross').value,
+      fBonus: document.getElementById('fBonus').value,
+      fHours: document.getElementById('fHours').value,
+      fDays:  document.getElementById('fDays').value,
+      fTolls: document.getElementById('fTolls').value,
+      fTax:   document.getElementById('fTax').value,
+      fMiles: document.getElementById('fMiles').value,
+      fGasPrice: document.getElementById('fGasPrice').value,
+      fMPG:   document.getElementById('fMPG').value,
+      fMaint: document.getElementById('fMaint').value,
+      ts: new Date().toISOString()
+    };
+    localStorage.setItem('gcp_save', JSON.stringify(data));
+    const chip = document.getElementById('savedChip');
+    chip.classList.add('show');
+    setTimeout(() => chip.classList.remove('show'), 2500);
+    toast('💾 Calculation saved!');
+  } catch(e) {
+    toast('⚠️ Could not save — storage unavailable');
+  }
+}
+
+function loadCalc() {
+  try {
+    const raw = localStorage.getItem('gcp_save');
+    if (!raw) { toast('📂 No saved calculation found'); return; }
+    const d = JSON.parse(raw);
+    ['fGross','fBonus','fHours','fDays','fTolls','fTax','fMiles','fGasPrice','fMPG','fMaint'].forEach(id => {
+      if (d[id] !== undefined) document.getElementById(id).value = d[id];
+    });
+    if (d.fTax) document.getElementById('taxDisplay').textContent = d.fTax + '%';
+    if (d.platform) {
+      platform = d.platform;
+      platformEmoji = d.platformEmoji || '🚗';
+      document.querySelectorAll('.p-btn').forEach(b => {
+        const match = b.textContent.trim().includes(d.platform);
+        b.classList.toggle('active', match);
+        b.setAttribute('aria-pressed', match ? 'true' : 'false');
+      });
+    }
+    calc();
+    const ts = new Date(d.ts);
+    toast('📂 Loaded: ' + ts.toLocaleDateString());
+  } catch(e) {
+    toast('⚠️ Could not load saved data');
+  }
+}
+
+/* =============================================
+   COPY RESULTS
+   ============================================= */
+function copyResults() {
+  const r = id => document.getElementById(id).textContent;
+  const txt = [
+    'GigCalcPro — ' + platform + ' Calculation — ' + new Date().toLocaleDateString(),
+    '────────────────────────────────────',
+    'Gross + Bonus:         ' + r('rGross'),
+    'Gas Expense:           ' + r('rGas'),
+    'Maintenance:           ' + r('rMaint'),
+    'Tolls & Parking:       ' + r('rTolls'),
+    'Tax Reserve:           ' + r('rTax'),
+    'Mileage Deduction:     ' + r('rMileage'),
+    'Real Hourly Rate:      ' + r('rHourly'),
+    '────────────────────────────────────',
+    'NET TAKE-HOME:         ' + r('rNet'),
+    'Weekly Projection:     ' + r('rWeekly'),
+    'Monthly Projection:    ' + r('rMonthly'),
+    '────────────────────────────────────',
+    'Calculated at GigCalcPro.com',
+    'For informational purposes only. Not financial or tax advice.'
+  ].join('\n');
+
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(txt).then(() => toast('✅ Copied to clipboard!'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.cssText='position:fixed;opacity:0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    toast('✅ Copied to clipboard!');
+  }
+}
+
+/* =============================================
+   PRINT / PDF
+   ============================================= */
+function printPDF() {
+  toast('📄 Opening print — choose "Save as PDF"');
+  setTimeout(() => window.print(), 700);
+}
+
+/* =============================================
+   SCROLL TO CALC
+   ============================================= */
+function scrollToCalc() {
+  document.getElementById('calculator').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* =============================================
+   TOAST
+   ============================================= */
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2700);
+}
+
+/* =============================================
+   MODAL SYSTEM
+   ============================================= */
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.classList.add('modal-open');
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.classList.remove('modal-open');
+}
+function closeModalOverlay(e, overlay) {
+  if (e.target === overlay) {
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+    document.body.classList.remove('modal-open');
+  }
+});
+
+/* =============================================
+   FAQ ACCORDION
+   ============================================= */
+function faqToggle(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.classList.contains('faq-q')) faqToggle(e.target);
+});
+
+/* =============================================
+   CONTACT FORM (frontend-only)
+   ============================================= */
+function submitContact(e) {
+  e.preventDefault();
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const msg = document.getElementById('cMessage').value.trim();
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!name || !email || !msg) { toast('⚠️ Please fill in all required fields'); return; }
+  if (!emailRe.test(email)) { toast('⚠️ Please enter a valid email address'); return; }
+  // UI-only success (no backend)
+  document.getElementById('formSuccess').classList.add('show');
+  document.getElementById('cName').value='';
+  document.getElementById('cEmail').value='';
+  document.getElementById('cSubject').value='';
+  document.getElementById('cMessage').value='';
+  toast('✅ Message sent!');
+}
+
+/* =============================================
+   INIT
+   ============================================= */
+document.addEventListener('DOMContentLoaded', calc);
+calc();
+</script>
+
+</body>
+</html>
