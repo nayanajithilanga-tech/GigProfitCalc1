@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigProfitCalc — Page Not Found</title>
+  <meta name="description" content="Page redirecting...">
+  <meta name="robots" content="noindex">
+  <!--
+    GitHub Pages SPA Fix
+    This script reads the current URL, converts path segments to a hash-based route,
+    and redirects back to the main index.html with the correct hash.
+    Based on: https://github.com/rafgraph/spa-github-pages
+  -->
+  <script>
+    // Preserve query parameters and path for SPA routing
+    var segmentCount = 0;
+    var l = window.location;
+    var path = l.pathname.slice(1).split('/').slice(segmentCount).join('/');
+    var query = l.search.slice(1);
+
+    // Redirect to index.html with path as hash
+    var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.slice(0, l.pathname.indexOf('/', 1) + 1) +
+      '?' + (query ? query + '&' : '') + 'p=/' + path +
+      (l.hash ? '&' + l.hash.slice(1) : '');
+
+    l.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  <p>Redirecting to GigProfitCalc...</p>
+</body>
+</html>
